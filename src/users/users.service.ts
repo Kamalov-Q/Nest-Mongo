@@ -25,6 +25,8 @@ export class UsersService {
         return { users, count: users?.length, message: "Users fetched successfully", success: true }
     }
 
+
+
     async getUserById(_id: string) {
         if (!Types?.ObjectId?.isValid(_id)) {
             throw new HttpException("Invalid user id", HttpStatus?.BAD_REQUEST)
@@ -68,4 +70,5 @@ export class UsersService {
     }
 
 }
+
 
